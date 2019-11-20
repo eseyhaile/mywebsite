@@ -84,9 +84,8 @@ p {
  font-size: 23px;
  margin-bottom: 100px;
  outline: 2px solid blue;
-
-/* media queries for nav */
 }
+/* media queries for nav */
 @media (min-width: 769px) {
 	.header,
 	.main-nav {
@@ -102,9 +101,10 @@ p {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
-	}
-/* extra sizing control for the header */
+	 }
 }
+/* extra sizing control for the header */
+
 .img-header{
 	object-fit: fill;
 }
@@ -137,3 +137,30 @@ grid-template-rows: 1fr;
 grid-column-gap: 10px;
 grid-row-gap: 0px;
 }
+.visuallyhidden {
+	 border: 0;
+	 clip: rect(0 0 0 0);
+	 height: 1px;
+	 margin: -1px;
+	 overflow: hidden;
+	 padding: 0;
+	 position: absolute;
+	 width: 1px;
+	 white-space: nowrap;
+ }
+
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+	 clip: auto;
+	 height: auto;
+	 margin: 0;
+	 overflow: visible;
+	 position: static;
+	 width: auto;
+	 white-space: inherit;
+ }
+ .skip-link {
+	 background-color: #fff;
+	 padding: 1em;
+	 z-index: 10000;
+ }
