@@ -1,14 +1,14 @@
+/* basics */
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 * {
 	box-sizing: border-box;
-
 }
 body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-	background-color: #fea49f;
+
 }
 ul {
   margin: 0;
@@ -33,7 +33,6 @@ a {
 	margin: 0;
 	font-size: 1.45em;
 }
-
 .main-nav {
 	margin-top: 5px;
 
@@ -55,7 +54,7 @@ a {
 	color: #718daa;
 }
 
-
+/* basic moving to flexbox */
 
 .header {
 	padding-top: .5em;
@@ -85,9 +84,8 @@ p {
  font-size: 23px;
  margin-bottom: 100px;
  outline: 2px solid blue;
-
-
 }
+/* media queries for nav */
 @media (min-width: 769px) {
 	.header,
 	.main-nav {
@@ -96,26 +94,101 @@ p {
 	.header {
 		flex-direction: column;
 		align-items: center;
-    	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
-	}
-
 }
+
+
 @media (min-width: 1025px) {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
-	}
-
+	 }
 }
+/* extra sizing control for the header */
+
 .img-header{
 	object-fit: fill;
+}
+.img-1{
+	width: 55%;
+}
+/*  CSS GRID */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+	"picture picture explanation ."
+	 ". . . ."
+	 ". . . .";
+ grid-gap: 20px;
+}
+
+.picture {
+	grid-area: picture; }
+
+.explanation{
+	grid-area: explanation; }
+	.parent {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr;
+}
+.parent-1 {
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 1fr;
+grid-column-gap: 10px;
+grid-row-gap: 0px;
+}
+
+.shop-main {
+	background: url("shopBack.jpg"), linear-gradient(black 0%, white 100%);
+	background-size: cover;
+	background-blend-mode: difference;
+}
+.shop-grid{
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+grid-gap: 25px;
+}
+
+.shop-grid section {
+	background: rgba(254,164,159, 0.5);
 
 }
-.img--money{
-	object-fit: fill;
-width: 10%;
+
+.shop-grid p {
+	outline: none;
+	align-self: center;
 }
+
+}
+.visuallyhidden {
+	 border: 0;
+	 clip: rect(0 0 0 0);
+	 height: 1px;
+	 margin: -1px;
+	 overflow: hidden;
+	 padding: 0;
+	 position: absolute;
+	 width: 1px;
+	 white-space: nowrap;
+ }
+
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+	 clip: auto;
+	 height: auto;
+	 margin: 0;
+	 overflow: visible;
+	 position: static;
+	 width: auto;
+	 white-space: inherit;
+ }
+ .skip-link {
+	 background-color: #fff;
+	 padding: 1em;
+	 z-index: 10000;
+ }
